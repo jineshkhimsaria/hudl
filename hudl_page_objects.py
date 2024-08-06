@@ -86,7 +86,6 @@ class HomePage:
         self.notification_link = (By.ID, "notifications-link")    #notification link
         self.messages_link = (By.XPATH, "//a[@data-qa-id='webnav-globalnav-messages']")    #messages link
         self.watch_now_menu_option = (By.XPATH, "//a[@data-qa-id='webnav-globalnav-watchnow']")     #watch now menu option
-        self.fan_home_page = (By.XPATH, '//div[@data-qa-id="fan-home-page"]')      #fan home page
         self.search_input_textbox = (By.ID, "uniId_:r0:")       #search input textbox
         self.search_results = (By.XPATH, "//li[@data-qa-id='search-results-group']/li[@class='styles_optionContainer__QepZb']")    #list of search results after typing some string in search box
         self.empty_list_container = (By.XPATH, "//div[@data-qa-id='search-empty-state-container']")     # empty list when no results are found
@@ -117,7 +116,6 @@ class HomePage:
             WebDriverWait(self.driver, delay).until(EC.element_to_be_clickable(self.watch_now_menu_option))
             print(self.driver.find_element(*self.watch_now_menu_option))
             self.driver.find_element(*self.watch_now_menu_option).click()
-            # WebDriverWait(self.driver, delay).until(EC.presence_of_element_located(self.fan_home_page))
         except Exception as e:
             print("Home page not loaded properly or watch now menu option not available")
             exit(e)
