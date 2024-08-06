@@ -15,9 +15,9 @@ else:
     print("********************   Please set HUDL_PASSWORD environment variable   ********************")
     exit() 
 
-team_name = "Newcastle Jets FC"     # team name. Change this if username used belongs to another team
+expected_team_name = "Newcastle Jets FC"     # team name. Change this if username used belongs to another team
 search_string_with_valid_char = "John"   # search string with valid characters
-search_string_with_junk_char = "!@#$%^&^@#!@$%^&@"  # search string with special characters
+search_string_with_special_char = "!@#$%^&^@#!@$%^&@"  # search string with special characters
 expected_search_placeholder_before_click = "Search Hudl Fan"    # expected search placeholder before click
 # Below string in visual mode
 expected_search_placeholder_after_click = "Search for an player, school, club, association or league"  # expected search placeholder after click
